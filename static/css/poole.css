@@ -152,12 +152,20 @@ code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
-code {
+/*code {
   padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
   background-color: #f9f9f9;
   border-radius: 3px;
+}*/
+code{
+  background: #fff;
+  font-size: 85%;
+  padding: 2px 4px;
+  border: 1px solid #E1E1E8;
+  background-color: #F7F7F9;
+  white-space: nowrap;
 }
 pre {
   display: block;
@@ -348,8 +356,22 @@ tbody tr:nth-child(odd) th {
 .post-date {
   display: block;
   margin-top: -.5rem;
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
   color: #9a9a9a;
+}
+
+.post-tags {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.post-tags a {
+  font-size: .8rem;
+  background: #9C4C3F;
+  padding: 0.2rem;
+  border-radius: 10%;
+  color: #FFFFFF !important;
+  font-weight: bold;
 }
 
 /* Related posts */

@@ -4,8 +4,15 @@
 <div class="post">
 	<h1 class="post-title">{{ article.title }}</h1>
 	<span class="post-date">{{ article.locale_date }}</span>
+	<span class="post-tags">
+	{% if article.tags %}
+        {% for tag in article.tags %}
+            <a href="{{ SITEUrL }}/tag/{{ tag }}.html">{{ tag }}</a>{% if not loop.last %} {% endif %}
+          {% endfor %}
+      {% endif %}
+	</span>
+
 	{{ article.content }}
-	{% include 'fragments/disqus.html' %}
+
 </div>
 {% endblock %}
-

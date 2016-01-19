@@ -31,8 +31,13 @@
  * Update the foundational and global aspects of the page.
  */
 
+ @font-face{
+     font-family: "Source";
+     src: url("../fonts/SourceSansPro-Regular.otf");
+ }
+
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Source", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -80,7 +85,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  font-family: "Source", serif;
   font-size: 3rem;
 }
 
@@ -90,8 +95,6 @@ html {
 
 .sidebar-about .profile-picture {
   margin: 0 auto;
-  border-radius: 50%;
-  border: 2px solid #5b8da2;
   max-width: 5rem;
 }
 
@@ -250,7 +253,7 @@ a.sidebar-nav-item.active:focus {
 
 /* Blue */
 .theme-base-0d .sidebar {
-  background-color: #6a9fb5;
+  background-color: #444;
 }
 .theme-base-0d .content a,
 .theme-base-0d .related-posts li a:hover {

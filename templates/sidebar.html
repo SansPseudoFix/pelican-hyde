@@ -8,19 +8,18 @@
 					{{ SITENAME }}
 				</a>
 			</h1>
+			<p>{% if SITESUBTITLE %} {{ SITESUBTITLE }}{% endif %}</p>
 			<p class="lead"></p>
 			<p class="lead">{{ BIO }} </p>
 			<p></p>
 		</div>
 		<nav class="sidebar-nav">
-			<a class="sidebar-nav-item" href="mailto:guilherme.sft@gmail.com">
+			<a class="sidebar-nav-item" href="mailto:spf@sanspseudofix.fr">
 				<i class="fa fa-envelope"></i>
 			</a>
-			{% for name, link in SOCIAL %}
-			<a class="sidebar-nav-item" href="{{ link }}">
-				<i class="fa fa-{{ name }}"></i>
+			<a class="sidebar-nav-item" href="https://github.com/SansPseudoFix">
+				<i class="fa fa-github"></i>
 			</a>
-			{% endfor %}
 			<a class="sidebar-nav-item" href="{{ FEED_ALL_RSS }}">
 				<i class="fa fa-feed"></i>
 			</a>
