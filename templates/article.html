@@ -13,8 +13,40 @@
 	</span>
 
 	{{ article.content }}
+	<a href="http://sharetodiaspora.github.io/?title=Your title here&url=http://www.example.com/some/path" target="_blank">
+		<img src="http://sharetodiaspora.github.io/favicon.png" style="border: 0px solid;" />
+	</a>
 
 </div>
 <a class="home" href="/"><i class="fa fa-home"></i>Retour maison</a>
+
+{% if article.prev_articles %}
+    <nav class="older">
+        <h1>Previous articles</h1>
+        <ul>
+            {% for article in article.prev_articles %}
+                <li>
+                    <a href="{{ SITEURL }}/{{ article.url }}">
+                        {{ article.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}
+{% if article.next_articles %}
+    <nav class="newer">
+        <h1>Next articles</h1>
+        <ul>
+            {% for article in article.next_articles %}
+                <li>
+                    <a href="{{ SITEURL }}/{{ article.url }}">
+                        {{ article.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}
 
 {% endblock %}

@@ -112,7 +112,7 @@ html {
   font-size: .8rem;
   font-weight: bold;
   float: left;
-  width: 17%;
+  width: 22%;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
@@ -126,6 +126,16 @@ a.sidebar-nav-item:focus {
 a.sidebar-nav-item.active:hover,
 a.sidebar-nav-item.active:focus {
   color: #fff;
+}
+
+.diaspora-icon {
+  display: block;
+  background-image: url(../fonts/diaspora_artwork_toolkit_by_naesk-d47bxjl.svg);
+  height: 16px;
+  width: 14px;
+  background-repeat: no-repeat;
+  background-position: bottom 18% left 8%;
+  background-size: 1100%;
 }
 
 /* Sticky sidebar
@@ -276,4 +286,28 @@ a.sidebar-nav-item.active:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+/* footer */
+
+.footer {
+  padding-top:    4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 48em) {
+  .footer {
+    max-width: 38rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer {
+    margin-left: 22rem;
+    margin-right: 4rem;
+
+    font-size: .8rem;
+  }
 }
