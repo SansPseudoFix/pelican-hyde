@@ -20,33 +20,24 @@
 </div>
 <a class="home" href="/"><i class="fa fa-home"></i>Retour maison</a>
 
+<div class="pagination">
 {% if article.prev_articles %}
-    <nav class="older">
-        <h1>Previous articles</h1>
-        <ul>
+    <span class="pagination-item older">
             {% for article in article.prev_articles %}
-                <li>
                     <a href="{{ SITEURL }}/{{ article.url }}">
-                        {{ article.title }}
+                      <<  {{ article.title }}
                     </a>
-                </li>
             {% endfor %}
-        </ul>
-    </nav>
+    </span>
 {% endif %}
 {% if article.next_articles %}
-    <nav class="newer">
-        <h1>Next articles</h1>
-        <ul>
-            {% for article in article.next_articles %}
-                <li>
+    <span class="pagination-item newer">
+        {% for article in article.next_articles %}
                     <a href="{{ SITEURL }}/{{ article.url }}">
-                        {{ article.title }}
+                        {{ article.title }} >>
                     </a>
-                </li>
             {% endfor %}
-        </ul>
-    </nav>
+    </span>
 {% endif %}
-
+</div>
 {% endblock %}
