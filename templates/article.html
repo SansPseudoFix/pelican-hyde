@@ -16,28 +16,29 @@
 	<a href="http://sharetodiaspora.github.io/?title=Your title here&url=http://www.example.com/some/path" target="_blank">
 		<img src="http://sharetodiaspora.github.io/favicon.png" style="border: 0px solid;" />
 	</a>
-
+	{% include 'comments.html' %}
 </div>
 <a class="home" href="/"><i class="fa fa-home"></i>Retour maison</a>
 
 <div class="pagination">
-{% if article.prev_articles %}
-    <span class="pagination-item older">
-            {% for article in article.prev_articles %}
+{% if article.next_articles %}
+    <span class="pagination-item newer">
+        {% for article in article.next_articles %}
                     <a href="{{ SITEURL }}/{{ article.url }}">
                       <<  {{ article.title }}
                     </a>
             {% endfor %}
     </span>
 {% endif %}
-{% if article.next_articles %}
-    <span class="pagination-item newer">
-        {% for article in article.next_articles %}
+
+{% if article.prev_articles %}
+    <span class="pagination-item older">
+            {% for article in article.prev_articles %}
                     <a href="{{ SITEURL }}/{{ article.url }}">
-                        {{ article.title }} >>
+                      {{ article.title }}  >>
                     </a>
             {% endfor %}
     </span>
 {% endif %}
-</div>
+</div> <!-- /pagination -->
 {% endblock %}

@@ -35,6 +35,11 @@
  * Update the foundational and global aspects of the page.
  */
 
+ @font-face{
+     font-family: "Source";
+     src: url("../fonts/SourceSansPro-Regular.otf");
+ }
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -48,7 +53,7 @@ body {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
