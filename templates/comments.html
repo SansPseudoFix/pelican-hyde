@@ -1,5 +1,3 @@
-<script data-isso="/Pelican-conf/isso-bk/" src="{{ SITEURL }}/theme/js/embed.js"></script>
-<section class="comments" id="comments">
-    <h2 class="panel">Comments</h2>
-        <section id="isso-thread"></section>
-</section>
+{% if ISSO_SERVER %}
+<p><a href="{{ SITEURL }}/{{ article.slug }}.html#isso-thread">Commentaires</a></p>
+{% endif %}

@@ -7,7 +7,7 @@
 	<span class="post-tags">
 	{% if article.tags %}
         {% for tag in article.tags %}
-            <a href="{{ SITEUrL }}/tag/{{ tag }}.html">{{ tag }}</a>{% if not loop.last %} {% endif %}
+            <a href="{{ SITEUrL }}/tag/{{ tag|string|replace(" ", "-" ) }}.html">{{ tag }}</a>{% if not loop.last %} {% endif %}
           {% endfor %}
       {% endif %}
 	</span>
@@ -16,7 +16,13 @@
 	<a href="http://sharetodiaspora.github.io/?title=Your title here&url=http://www.example.com/some/path" target="_blank">
 		<img src="http://sharetodiaspora.github.io/favicon.png" style="border: 0px solid;" />
 	</a>
+	<!-- Comments -->
 	{% include 'comments.html' %}
+	{% if ISSO_SERVER %}
+		<hr /><section id="isso-thread"></section>
+		<noscript>les commentaires de ce site utilisent javascript</noscript>
+	{% endif %}
+	<!-- /comments -->
 </div>
 <a class="home" href="/"><i class="fa fa-home"></i>Retour maison</a>
 

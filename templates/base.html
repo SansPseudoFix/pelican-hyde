@@ -21,6 +21,10 @@
 		<!-- RSS -->
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
+		{% if ISSO_SERVER %}
+			<script data-isso="{{ ISSO_SERVER }}/" src="{{ ISSO_SERVER }}/js/embed.min.js"></script>
+		{% endif %}
+
 	</head>
 
 	<body class="theme-base-0d">
