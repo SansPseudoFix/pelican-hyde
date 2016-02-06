@@ -3,7 +3,7 @@
 		<div class="sidebar-about">
 
 			<h1>
-				<a href="/">
+				<a href="{{ SITEURL }}">
 					<img class="profile-picture" src="{{ SITEURL }}/images/{{ PROFILE_IMAGE }}">
 					{{ SITENAME }}
 				</a>
@@ -23,7 +23,7 @@
 			<a class="sidebar-nav-item" href="https://diaspora-fr.org/u/spf">
 				<i class="fa diaspora-icon"></i>
 			</a>
-			<a class="sidebar-nav-item" href="{{ FEED_ALL_RSS }}">
+			<a class="sidebar-nav-item" href="{{ SITEURL }}/{{ FEED_ALL_RSS }}">
 				<i class="fa fa-feed"></i>
 			</a>
 		</nav>

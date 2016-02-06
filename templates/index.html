@@ -7,11 +7,11 @@
 				<h1 class="post-title" href="{{ SITEURL }}/{{ article.url }}">
 					<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
 				</h1>
-				<span class="post-date">{{ article.locale_date }}</span>
+				<span class="post-date">{{ article.locale_date }} - {% include 'comments.html' %}</span>
 				<span class="post-tags">
 						{% if article.tags %}
 			        {% for tag in article.tags %}
-			            <a href="{{ SITEURL }}/tag/{{ tag|string|replace(" ", "-" ) }}.html">{{ tag }}</a>{% if not loop.last %} {% endif %}
+			            <a href="{{ SITEURL }}/tag/{{ tag|string|lower|replace(" ", "-")|replace("é", "e")|replace("è", "e")|replace("ê", "e")|replace("à", "a")|replace(":", "-") }}.html">{{ tag }}</a>{% if not loop.last %} {% endif %}
 			          {% endfor %}
 			      {% endif %}
 					</span>

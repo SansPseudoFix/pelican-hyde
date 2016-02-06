@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 
+{% block title %}{{ article.title }}{% endblock %}
+
 {% block content %}
 <div class="post">
 	<h1 class="post-title">{{ article.title }}</h1>
-	<span class="post-date">{{ article.locale_date }}</span>
+	<span class="post-date">{{ article.locale_date }} - {% include 'comments.html' %} </span>
 	<span class="post-tags">
 	{% if article.tags %}
         {% for tag in article.tags %}
-            <a href="{{ SITEUrL }}/tag/{{ tag|string|replace(" ", "-" ) }}.html">{{ tag }}</a>{% if not loop.last %} {% endif %}
+            <a href="{{ SITEURL }}/tag/{{ tag|string|lower|replace(" ", "-")|replace("é", "e")|replace("è", "e")|replace("ê", "e")|replace("à", "a")|replace(":", "-") }}.html">{{ tag }}</a>{% if not loop.last %} {% endif %}
           {% endfor %}
       {% endif %}
 	</span>
 
 	{{ article.content }}
-	<a href="http://sharetodiaspora.github.io/?title=Your title here&url=http://www.example.com/some/path" target="_blank">
-		<img src="http://sharetodiaspora.github.io/favicon.png" style="border: 0px solid;" />
+	<!-- share diaspora -->
+	<a href="javascript:;" onclick="window.open('http://sharetodiaspora.github.io/?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title),'das','location=no,links=no,scrollbars=no,toolbar=no,width=620,height=550'); return false;" rel="nofollow" target="_blank"
+	style="padding: 3px 4px 2px; background: #fafafa; border: 1px solid #ddd; font-size: 13px; color: #222; text-decoration: none;">
+		<img src="http://sharetodiaspora.github.io/favicon.png" style="border: 0px solid;display: inline-block;vertical-align: top;" /> diaspora*
 	</a>
+	<!-- /share diaspora -->
+
 	<!-- Comments -->
-	{% include 'comments.html' %}
 	{% if ISSO_SERVER %}
 		<hr /><section id="isso-thread"></section>
 		<noscript>les commentaires de ce site utilisent javascript</noscript>

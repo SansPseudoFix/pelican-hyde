@@ -3,8 +3,8 @@ $(document).ready(function(){
 	$(".attention").wrapInner("<p class=\"attention-text\"></p>"); // Ajoute la classe attention-text aux p
 	$("<i class=\"fa fa-exclamation-triangle attention-icon\"></i>").prependTo(".attention"); // Ajoute l'icone à la div .attention
     // nb
-	$(".nb").wrapInner("<p class=\"nb-text\"></p>");
-	$("<i class=\"fa fa-info-circle nb-icon\"></i>").prependTo(".nb");
+	$(".nota").wrapInner("<p class=\"nota-text\"></p>");
+	$("<i class=\"fa fa-info-circle nota-icon\"></i>").prependTo(".nota");
     // edit
     $(".edit").wrapInner("<p class=\"edit-text\"></p>");
 	$("<i class=\"fa fa-pencil-square-o edit-icon\"></i>").prependTo(".edit");
@@ -16,7 +16,7 @@ $(document).ready(function(){
 	$("<i class=\"fa fa-file-archive-o dl-zip-icon\"></i>").prependTo(".dl-zip");
 
     // liens
-    $(".nb a").css('color','#FFF').css('text-decoration','underline'); // Change la couleur du lien en noir et souligne (sinon, c'est bleu sur fond bleu avec le CSS)
+    $(".nota a").css('color','#FFF').css('text-decoration','underline'); // Change la couleur du lien en noir et souligne (sinon, c'est bleu sur fond bleu avec le CSS)
     $(".attention a").css('color','#FFF').css('text-decoration','underline');
     $(".edit a").css('color','#FFF').css('text-decoration','underline');
     $(".git a").css('color','#FFF').css('text-decoration','underline');
