@@ -177,6 +177,12 @@ video {max-width: 100%;}
   max-width: 5rem;
 }
 
+.sidebar-about a:focus,
+.sidebar-about a:hover,
+.sidebar-about a:active {
+  outline: 0;
+}
+
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
