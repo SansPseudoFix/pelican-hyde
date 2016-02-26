@@ -34,12 +34,6 @@
  *
  * Update the foundational and global aspects of the page.
  */
-
- @font-face{
-     font-family: "Source";
-     src: url("../fonts/SourceSansPro-Regular.otf");
- }
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -157,13 +151,7 @@ code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
-/*code {
-  padding: .25em .5em;
-  font-size: 85%;
-  color: #bf616a;
-  background-color: #f9f9f9;
-  border-radius: 3px;
-}*/
+
 code{
   background: #fff;
   font-size: 85%;

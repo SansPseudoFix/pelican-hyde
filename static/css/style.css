@@ -1,0 +1,90 @@
+
+ @font-face{
+     font-family: "Source";
+     src: url("../fonts/SourceSansPro-Regular.otf");
+ }
+
+/*
+*    BOXES : Attention (.attention) - Nota Bene (.nota) - Edit (.edit) - Github (.git) - Zip (.dl-zip)
+*
+*/
+.nota, .attention, .edit{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 85%;
+}
+
+.git, .dl-zip{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.nota, .git, .dl-zip{background: rgba(28, 138, 174, 0.9); /*#8FB299;*/}
+.attention, .edit{background: rgba(156,76,63,0.9); /*#9C4C3F;*/}
+
+.nota-icon, .attention-icon, .edit-icon{
+    display: inline-block !important;
+    font-size: 2rem !important;
+    width: 7%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #FFF;
+    vertical-align: middle;
+}
+.git-icon, .dl-zip-icon{
+    width: 16%;
+    font-size: 2rem !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #FFF;
+    vertical-align: middle;
+    border-right: 2px solid #333;
+    padding: 10px;
+}
+
+.nota-text, .attention-text, .edit-text{
+    display: inline-block;
+    width: 90%;
+    color: #FFF;
+    font-weight: bold;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    padding-left: 0.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.git-text, .dl-zip-text{
+    display: inline-block;
+    margin-left: 1rem;
+    color: #FFF;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.attention a:hover, .attention a:focus,
+.nota a:hover, .nota a:focus{color: #FFF;}
+
+.nota-text code, .attention-text code, .edit-text code { color: #444; }
+
+/* /boxes */
+
+/***** ISSO *****/
+
+.isso-postbox > .form-wrapper .textarea,
+.isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
+  box-shadow: none !important;
+}
+
+
+.center img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
