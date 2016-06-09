@@ -4,6 +4,12 @@
      src: url("../fonts/SourceSansPro-Regular.otf");
  }
 
+video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*
 *    BOXES : Attention (.attention) - Nota Bene (.nota) - Edit (.edit) - Github (.git) - Zip (.dl-zip)
 *
