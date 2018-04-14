@@ -24,7 +24,9 @@
 		<link rel="alternate" type="application/atom+xml" title="atom" href="/feeds/all.atom.xml">
 
 		{% if ISSO_SERVER %}
-			<script data-isso="{{ ISSO_SERVER }}/" src="{{ ISSO_SERVER }}/js/embed.min.js"></script>
+			<script data-isso="{{ ISSO_SERVER }}/"
+			data-isso-avatar="false"
+			src="{{ ISSO_SERVER }}/js/embed.min.js"></script>
 		{% endif %}
 
 	</head>
